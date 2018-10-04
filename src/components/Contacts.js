@@ -25,6 +25,9 @@ class Contacts extends Component {
       ]
     }
   
+    deleteContact = ()=>{
+      console.log(123);
+    }
 
   render() {
     const { contacts } = this.state;
@@ -34,7 +37,7 @@ class Contacts extends Component {
         {contacts.map(contact =>(
           <Contact 
           key={contact.id}
-          contact={contact} 
+          contact={contact} deleteClickHandler={this.deleteContact}
           /> 
         ))}  
       </React.Fragment>
