@@ -8,7 +8,6 @@ class Contact extends Component {
   };
 
   onDeleteClick = () => {
-    this.props.deleteClickHandler();
   }
 
   render() {
@@ -35,16 +34,14 @@ class Contact extends Component {
             <li className="list-group-item">Email: {email}</li>
             <li className="list-group-item">Phone:{phone}</li>
           </ul>
-        ) : null}
-        
+        ) : null}       
       </div>
     );
   }
 }
 
 Contact.propTypes ={
-  contact: PropTypes.object.isRequired,
-  deleteClickHandler: PropTypes.func.isRequired
+  contact: PropTypes.object.isRequired
 }
 
 
