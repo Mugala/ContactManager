@@ -36,7 +36,8 @@ export class Provider extends Component{
         email: 'henry@gmail.com',
         phone: '111-111-1111'
       }
-    ]
+    ],
+    dispatch: action => this.setState(state => reducer(state,action))
   }
 
   render(){
