@@ -7,7 +7,12 @@ class AddContact extends Component {
     phone: ''
   };
 
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  onSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+  }
+
+  onChange = e => this.setState({ [e.target.name]: e.target.value });
 
 
   render() {
@@ -16,7 +21,7 @@ class AddContact extends Component {
       <div className="card mb-3">
         <div className="card-header">Add Contact</div>
         <div className="card-body">
-          <form>
+          <form onSubmit={this.onSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input 
