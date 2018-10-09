@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
-//import axios from 'axios';
+import axios from 'axios';
 
 
 
@@ -12,6 +12,19 @@ class EditContact extends Component {
     phone: '',
     errors: {}
   };
+
+  async componentDidMount(){
+    const { id } = this.props.match.params;
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+
+    const contact = res.data;
+
+    this.setState({
+      name: contact.name,
+      email: contact.email,
+      phone: contact.phone
+    });
+  }
 
   onSubmit = async (dispatch, e) => {
     e.preventDefault();
