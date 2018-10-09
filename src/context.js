@@ -40,7 +40,7 @@ export class Provider extends Component{
       <Context.Provider value={this.state}>
         {this.props.children}
       </Context.Provider>
-    )
+    );
   }
 }
 
