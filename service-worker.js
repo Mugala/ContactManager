@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/Mugala/contactManager/precache-manifest.0fce481a50fa975d71f5d02150ef9882.js"
+  "/contactManager/precache-manifest.55a7d9f583787c2dd8b12b2514f838ca.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Mugala/contactManager/index.html", {
+workbox.routing.registerNavigationRoute("/contactManager/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
